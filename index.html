@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Masjid Arkan:Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jquery-hijra-date file -->
+    <script src="js/node_modules/jquery-hijri-date/jquery.hijri.date.min.js"></script>
+    <!-- my JS file-->
+    <script src="js/myjs.js"></script>
+    <script src="js/prayerTime.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+
+</head>
+
+<body>
+    <div class="nav-body">
+        <div href="index.html" class="navbar-brand">
+            <img class="logo mx-auto d-block" src="images/logo.png">
+        </div>
+        <div>
+            <div class="text-center logo-text">Masjid Arkan </div>
+        </div>
+        <div class="m-2">
+            <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent">
+                <div class="container-fluid">
+                    <button type="button" class="navbar-toggler mx-auto" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto ">
+                            <a href="index.html" class="nav-item nav-link text-center  px-3 active">Home</a>
+                            <a href="" class="nav-item nav-link text-center px-3 active">Education</a>
+                            <a href="Donation.html" class="nav-item nav-link text-center px-3 active">Donations</a>
+                            <a href="Contactus.html" class="nav-item nav-link text-center bg-green px-3 active">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="bismi">
+             بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+        </div>
+    </div>
+    <div class="container-lg my-2">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="w-60 h-100 rounded-3 ">
+                    <div class="py-1">
+                        <!-- Hijra Date jquery element-->
+                        <div class="date text-center my-date py-2"></div>
+                        <div class="date text-center" id="today-date"></div>
+
+                        <h5 class="text-center py-4">
+                            <img src="images/prayerTime.jpeg" class="icon" alt="Salah time icon">
+                            Prayer Timings
+                            <img src="images/prayerTime.jpeg" class="icon" alt="Salah time icon">
+                        </h5>
+
+                        <div class="col-md-6 mx-auto">
+                            <table class="table table-borderless text-center ">
+                                <thead>
+                                    <tr class="table-light-purple">
+                                        <th class="ramadan-text">Prayer Name</th>
+                                        <th class="ramadan-text">Iqama Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="body-text">
+                                    <tr>
+                                        <th>Fajar</th>
+                                        <th id="fazar"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Zohar</th>
+                                        <th id="zohar"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Asar</th>
+                                        <th id="asar"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Magrib</th>
+                                        <th id="magrib"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Isha</th>
+                                        <th id="isha"></th>
+                                    </tr>
+                                    <tr class="table-light-purple">
+                                        <th class="ramadan-text">JUMU'AH </th>
+                                        <th class="ramadan-text">Not Available</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="w-60 h-100 rounded-3 ">
+                    <h3 class="text-center text-light-purple py-1 text-uppercase">
+                        <img src="images/logo.png" class="flogo" alt="logo icon">
+                        Masjid Arkan
+                    </h3>
+                    <div class="py-1">
+                        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <!-- Carousel indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                                <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+                                <li data-bs-target="#myCarousel" data-bs-slide-to="5"></li>
+                                <li data-bs-target="#myCarousel" data-bs-slide-to="6"></li>
+                            </ol>
+
+                            <!-- Wrapper for carousel items -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item  active">
+                                    <img src="images/Slide1.jpg" class="d-block w-100 img1 slide rounded-3"
+                                        alt="Slide 1">
+                                    <h3 class="carousel-caption shadow-sm p-3 mb-5 bg-light text-dark rounded">Daily
+                                        Five Time Prayers </h3>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Slide2.jpg" class="d-block  w-100 img1 slide rounded-3"
+                                        alt="Slide 2">
+                                    <h3 class="carousel-caption shadow-sm p-3 mb-5 bg-light text-dark rounded"> Kids and
+                                        Adults Quran Hifz Programs </h3>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Slide3.jpg" class="d-block  w-100 img1  slide rounded-3"
+                                        alt="Slide 3">
+                                    <h3 class="carousel-caption shadow-sm p-3 mb-5 bg-light text-dark rounded"> Weekend
+                                        School </h3>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Slide4.jpg" class="d-block  w-100 img1 slide rounded-3"
+                                        alt="Slide 4">
+                                    <h3 class="carousel-caption shadow-sm p-3 mb-5 bg-light text-dark rounded">
+                                        Dedicated Imam </h3>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Slide5.jpg" class="d-block  w-100 img1 slide rounded-3"
+                                        alt="Slide 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Slide6.jpg" class="d-block  w-100 img1 slide rounded-3"
+                                        alt="Slide 6">
+                                </div>
+                            </div>
+
+                            <!-- Carousel controls -->
+                            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="my-2">
+            <marquee class="news" width="90%" direction="left" height="25px" scrollamount="5">
+                <div>
+                    <b class="text-red">Announcements:</b>
+                    1. There is a Iqmama time update
+                    2. Sunday Night Halak Every Sunday After Magrib
+                </div>
+            </marquee>
+        </div>
+        <hr class="bg-danger border-2 border-top border-success">
+    </div>
+
+    <div class="container">
+        <div class="p-4 my-4 bg-light rounded-3">
+            <h3 class="text-center">Masjid Arkan needs your help and donation more than ever</h3>
+            <p class="text-center"> إِنَّ الَّذِينَ آمَنُواْ وَعَمِلُواْ الصَّالِحَاتِ وَأَقَامُواْ الصَّلاَةَ وَآتَوُاْ
+                الزَّكَاةَ لَهُمْ أَجْرُهُمْ عِندَ رَبِّهِمْ وَلاَ خَوْفٌ عَلَيْهِمْ وَلاَ هُمْ يَحْزَنُونَ</p>
+            <p class="text-center">Verily, those who have attained to faith and do good works, and are constant in
+                prayer, and dispense charity - they shall have their reward with their Sustainer, and no fear need they
+                have, and neither shall they grieve. 2:277</p>
+            <p class="text-center"> Support your masjid with your donations and services</p>
+
+            <!-- <div class="text-center">
+                <a href=" https://us.mohid.co/az/phoenix/iclaveen/masjid/online/donation/1"
+                    class="btn btn-success btn-lg" role="button">Donate Today</a> -->
+
+               <h4 class="text-center">
+                    <img src="images/paypal.png" class="icon" alt="PayPal icon"> Donate with PayPal
+                </h4>
+                <div class="text-center">
+                    <form action="https://www.paypal.com/donate" method="post" target="_top">
+                        <input type="hidden" name="hosted_button_id" value="CVNXG34PJJU3Y" />
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                        </form>
+                </div> 
+            </div>
+        </div>
+        <hr class="bg-danger border-2 border-top border-success">
+    </div>
+
+    <!-- Event details -->
+    <div class="container p-2">
+        <!--Row with three equal columns
+        <div class="row g-4 px-2">
+            <h5 class="text-center">
+                <img src="images/events.png" class="icon" alt="Events icon">
+                Programs and Events 
+            </h5>
+            <div class="col-md-6">
+                <div class=" colum-1">
+                    <div class="text-center text-light">
+                        <h4 class="p-2">Friday Night Halaka</h4>
+                        <p class="h5">By: Masjid Imam</p>
+                        <div class="h5" id="nextFriday"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="colum-2">
+                    <div class="text-center text-light">
+                        <h4 class="p-2">Youth Program</h4>
+                        <p class="h5">By: Masjid Imam</p>
+                        <div class="h5" id="nextSaturday"></div> 
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <p><a href="Events.html" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+        </div>
+    <hr class="bg-danger border-2 border-top border-success"> -->
+        
+    </div>
+
+    <div class="container">
+        <div class="bg-light rounded-3">
+                <h5 class="text-center">
+                    <img src="images/mosque.png" class="icon" alt="Masjid icon">
+                    More than a Masjid, We are a Community </br> </br>
+                    <img src="images/faithImage.jpeg" class="img-fluid rounded-3" alt="More than a community">
+                </h5>
+               
+                <div class="text-center g-4 p-4">
+                    <p>At Masjid Arkan, we are committed to helping our community and the people within it. </p>
+                    <p>“Be kind, for whenever kindness becomes part of something, it beautifies it. Whenever it is taken
+                        from something, it leaves it tarnished.” - Prophet Muhammad (PBUH)</p>
+                    <p>We believe that the masjid should be more than a gathering of the faithful, but a gathering of
+                        people
+                        looking to beautify both themselves and the world around them.</p>
+                </div>
+
+                <div class="col text-center">
+                    <p href="AboutUs.html" class="btn btn-success">About Us &raquo;</p>
+                </div>
+            </div>
+            <!--
+            <div class="col-md-6 ">
+                <h5 class="text-center">
+                    <img src="images/quranicon.png" class="icon" alt="Quran icon">
+                    Kids and Adults Hifz Programs
+                </h5>
+                <img src="masjid-pics/quran.jpeg" class="img-fluid rounded-3" alt="Quran Images">
+                <div class="text-center g-4 p-4">
+                    <p>Welcome to the Islamic Center of Laveen (ICL) website which provides a brief overview of the Noor
+                        Al-Quran School’s academic
+                        activities and achievements, as well as its policies and procedures.</p>
+                </div>
+                <div class="col text-center">
+                    <p><a href="Education.html" class="btn btn-success">Learn More &raquo;</a></p>
+                </div>
+            </div>
+                -->
+    
+        <hr class="bg-danger border-2 border-top border-success">
+    </div>
+
+    <div class="container foot flogo-text">
+        <!-- Footer -->
+        <footer class="page-footer font-small blue pt-4">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase ">
+                            <img src="images/logo.png" class="flogo" alt="logo icon">
+                            Masjid Arkan
+                        </h5>
+                        <p class="h6 p-2">
+                            <img src="images/address.png" class="fimage" alt="address icon">
+                            7102 N 35th Ave Suite#3, Phoenix, AZ 85051
+                        </p>
+                        <p class="h6 p-2">
+                            <img src="images/phone.png" class="fimage" alt="phone icon">
+                            602-476-3270
+                        </p>
+                        <p class="h6 p-2">
+                            <img src="images/email.png" class="fimage" alt="email icon">
+                            secretary@masjidarkan.net 
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3 ">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase text-decoration-underline">Reach Us</h5>
+
+                        <ul class="list-unstyled ">
+                            <li class="p-1 h6 ">
+                                <a class="flink " href="#">Donations</a>
+                            </li>
+                            <li class="p-1 h6">
+                                <a class="flink" href="#">Membership</a>
+                            </li>
+                            <li class="p-1 h6">
+                                <a class="flink" href="#">About Us</a>
+                            </li>
+                            <li class="p-1 h6">
+                                <a class="flink" href="#">Weekend School at Masjid Arkan </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase text-decoration-underline">Important links</h5>
+
+                        <ul class="list-unstyled">
+                            <li class="p-1 h6">
+                                <a class="flink" href="https://www.islamicfinder.org/islamic-calendar/">Islamic
+                                    Calendar</a>
+                            </li>
+                            <li class="p-1 h6">
+                                <a class="flink" href="https://www.muslim-library.com/?lang=English">Muslim
+                                    e-Library</a>
+                            </li>
+                            <li class="p-1 h6">
+                                <a class="flink" href="https://quran.com/">Nobal Quran</a>
+                            </li>
+                            <li class="p-1 h6">
+                                <a class="flink"
+                                    href="https://www.azmuslims.org/list-of-mosques-in-arizona.html">Masjids in
+                                    Arizona</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2023 Masjid Arkan | All rights reserved.
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </div>
+
+</body>
+
+</html>

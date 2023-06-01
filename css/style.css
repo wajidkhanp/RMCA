@@ -1,0 +1,265 @@
+body {
+  /*white back gound*/
+  background-color: #f7f6ff !important;
+  /*green back gound*/
+  /*background-color: #a7c957; */
+  /* background-color:lightgrey; */
+
+
+}
+
+.sec1 {
+  background-image: url("/images/section1.jpg");
+  background-color: #cccccc;
+  border-radius: 20px;
+  margin: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+
+.parking {
+
+  border-radius: 20px;
+
+  height: 300px;
+  width: 340px;
+
+}
+
+/* LOGO */
+.logo {
+  position: relative;
+  display: block;
+  width: 260px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.logo-text {
+  color: white;
+  text-align: center;
+  position: relative;
+  font-size: 35px;
+  top: -40px;
+}
+.flogo-text {
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.ramadan-text {
+  color: white;
+  text-align: center;
+  position: relative;
+
+}
+
+.table-light-purple {
+  background-color: #0d2052;
+}
+.logo-maintext {
+
+  color: white;
+  position: relative;
+
+}
+
+.short-nav {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 18Px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.icon {
+  height: 30px;
+  width: 40px;
+  position: relative;
+
+}
+
+.fimage {
+  height: 25px;
+  width: 30px;
+  position: relative;
+}
+.flogo {
+  height: 80px;
+  width: 100px;
+  position: relative;
+}
+
+.colum-1 {
+  background-image: url("../images/colum1.jpeg");
+  height: 200px;
+  padding-top: 25px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.colum-2 {
+  background-image: url("../images/colum1.jpeg");
+  height: 200px;
+  padding-top: 25px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.colum-3 {
+  background-image: url("../images/colum3.jpeg");
+  height: 200px;
+  padding-top: 25px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.nav-item {
+  font-size: 20px !important;
+}
+
+.event-image {
+
+  width: 100%;
+  height: 100px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.text-red {
+  color: rgb(37, 3, 73);
+}
+
+.date {
+  color: rgb(37, 3, 73);
+  font-weight: bold;
+  padding-top: -10px;
+}
+
+.foot {
+  background-image: url('../images/foot.jpg');
+  background-color: rgb(6, 17, 114);
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: maroon;
+}
+
+.btncolor {
+  background-color: rgb(9, 9, 54);
+}
+
+.bismi {
+  font-size: 36px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  color: rgb(37, 3, 73);
+}
+
+.body-text{
+  font-size: 18px;
+  width: 60%;
+  height: 40px;
+  text-align: center;
+  color: rgb(37, 3, 73);
+}
+
+.ramadan-date {
+  font-size: 18px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: rgb(37, 3, 73);
+}
+
+.nav-body {
+  background-image: url('../images/HeadingBG.jpg');
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  position: relative;
+}
+
+.nav-body-ramadan {
+  background-image: url('../images/Ramadan2.jpeg');
+  background-color: wheat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  position: relative;
+}
+
+.nav-body::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.news {
+  padding-top: 30px;
+  width: 100%;
+  height: 60px;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url('../images/menu.png') !important;
+}
+
+.double {
+  background-image: url('../images/reward.png');
+  background-position: 0 1.03em;
+  background-repeat: repeat-x;
+  background-size: 2px 6px;
+  color: rgb(37, 3, 73);
+}
+
+.img1 {
+  float: left;
+  width:  100px;
+  height: 400px;
+  object-fit: cover;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: whitesmoke;
+  background-color: transparent;
+  text-decoration: underline;
+}
