@@ -1,7 +1,3 @@
-# masjidLaveen
-
-This code base is for Masjid website created from scratch. 
-
-<img width="1680" alt="Screen Shot 2021-12-22 at 5 07 05 PM" src="https://user-images.githubusercontent.com/11093819/147189934-49d74a90-39a4-4747-a17f-e4c0c546c36f.png">
-
-<img width="1680" alt="Screen Shot 2021-12-22 at 9 54 04 PM" src="https://user-images.githubusercontent.com/11093819/147189952-fa464fd0-7105-4ffd-9432-473cf6616ca8.png">
+![masjidarkan com_(iPhone XR)](https://github.com/wajidkhanp/RMCA/assets/11093819/7fb77da6-f915-4e4f-a620-031439d09df0)
+![masjidarkan com_Contactus html(iPhone XR)](https://github.com/wajidkhanp/RMCA/assets/11093819/bfeb0c17-c85a-4faf-bc2f-183817dddcb1)
+![masjidarkan com_Donation html(iPhone XR)](https://github.com/wajidkhanp/RMCA/assets/11093819/3dc42d96-f3af-4ab9-9429-d7c13e672b40)
