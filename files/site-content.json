@@ -3,7 +3,7 @@
     "fajr": "6:45 AM",
     "dhuhr": "1:00 PM",
     "asr": "4:30 PM",
-    "maghrib": "5:30 PM",
+    "maghrib": "5 minutes after sunset",
     "isha": "7:45 PM"
   },
   "jumuah": "",

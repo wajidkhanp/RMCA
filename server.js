@@ -27,7 +27,7 @@ function ensureContentFile() {
   fs.copyFileSync(seedContentPath, contentPath);
 }
 ensureContentFile();
-function readContent() { return JSON.parse(fs.readFileSync(contentPath, "utf8")); }
+function readContent() { const content = JSON.parse(fs.readFileSync(contentPath, "utf8")); content.iqamaTimes = { ...content.iqamaTimes, maghrib: "5 minutes after sunset" }; return content; }
 function writeContent(content) { fs.writeFileSync(contentPath, JSON.stringify(content, null, 2)); }
 function safeEqual(left, right) { const a = Buffer.from(String(left)); const b = Buffer.from(String(right)); return a.length === b.length && crypto.timingSafeEqual(a, b); }
 function sign(value) { return crypto.createHmac("sha256", sessionSecret).update(value).digest("hex"); }
@@ -48,7 +48,7 @@ app.put("/api/content", requireAdmin, (req, res) => {
   const source = req.body || {};
   const iqamaTimes = source.iqamaTimes || {};
   const content = {
-    iqamaTimes: { fajr: cleanTime(iqamaTimes.fajr), dhuhr: cleanTime(iqamaTimes.dhuhr), asr: cleanTime(iqamaTimes.asr), maghrib: cleanTime(iqamaTimes.maghrib), isha: cleanTime(iqamaTimes.isha) },
+    iqamaTimes: { fajr: cleanTime(iqamaTimes.fajr), dhuhr: cleanTime(iqamaTimes.dhuhr), asr: cleanTime(iqamaTimes.asr), maghrib: "5 minutes after sunset", isha: cleanTime(iqamaTimes.isha) },
     jumuah: cleanTime(source.jumuah),
     announcements: Array.isArray(source.announcements) ? source.announcements.slice(0, 3).map((line) => String(line || "").trim().slice(0, 160)).filter(Boolean) : []
   };
