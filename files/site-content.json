@@ -1,0 +1,13 @@
+{
+  "iqamaTimes": {
+    "fajr": "6:45 AM",
+    "dhuhr": "1:00 PM",
+    "asr": "4:30 PM",
+    "maghrib": "5:30 PM",
+    "isha": "7:45 PM"
+  },
+  "jumuah": "",
+  "announcements": [
+    "Sunday night halaqah every Sunday after Maghrib."
+  ]
+}

@@ -1,28 +1,40 @@
 # Masjid Arkan website
 
-The public website for Masjid Arkan, Phoenix, Arizona.
+The Masjid Arkan public website and password-protected admin panel.
 
-## Updating Iqamah times
+## Private admin panel
 
-The modern home page reads the daily schedule from `files/prayertime.json`.
-Update the values in that file and publish the changed file to update the public
-website. `jumuah` is optional; leave it blank when the time is not yet confirmed.
+After deployment, open `/admin.html`. It allows authorized staff to update all
+five Iqamah times, Jumu'ah details, and up to three public announcements. Public
+homepage content updates as soon as the admin form is saved.
 
-```json
-{
-  "fazar": "6:45 AM",
-  "zohar": "1:00 PM",
-  "asar": "4:30 PM",
-  "magrib": "5:30 PM",
-  "isha": "7:45 PM",
-  "jumuah": "12:30 PM and 1:30 PM"
-}
+## Railway deployment
+
+Railway runs the site using `npm start`. Add these Railway variables before the
+first deployment:
+
+```text
+ADMIN_PASSWORD=<a strong password chosen by the masjid>
+SESSION_SECRET=<a long random value>
+NODE_ENV=production
 ```
 
-The site is static. A secure online form for non-technical administrators needs
-a small hosted backend or a Git-based CMS; it should not be implemented as an
-unprotected page in this static site.
+For persistent admin edits, create a Railway volume mounted at `/data`, then
+add this variable:
 
-<img width="1680" alt="Screen Shot 2021-12-22 at 5 07 05 PM" src="https://user-images.githubusercontent.com/11093819/147189934-49d74a90-39a4-4747-a17f-e4c0c546c36f.png">
+```text
+ARKAN_CONTENT_FILE=/data/site-content.json
+```
 
-<img width="1680" alt="Screen Shot 2021-12-22 at 9 54 04 PM" src="https://user-images.githubusercontent.com/11093819/147189952-fa464fd0-7105-4ffd-9432-473cf6616ca8.png">
+Copy `files/site-content.json` to the mounted volume once during setup. Without
+a persistent volume, Railway can lose schedule and announcement updates when it
+restarts or redeploys the service.
+
+## Local development
+
+```bash
+npm install
+ADMIN_PASSWORD="your-local-password" SESSION_SECRET="your-long-local-secret" npm start
+```
+
+Do not commit `.env` or share the admin password.
