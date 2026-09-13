@@ -12,6 +12,11 @@ const sessionSecret = process.env.SESSION_SECRET;
 if (!adminPassword || !sessionSecret) throw new Error("ADMIN_PASSWORD and SESSION_SECRET must be set before starting the server.");
 
 app.use(express.json({ limit: "20kb" }));
+const legacyRoutes = {
+  "/index.html": "/", "/Education.html": "/education", "/Events.html": "/programs", "/Donation.html": "/donate",
+  "/Contactus.html": "/contact", "/AboutUs.html": "/about", "/timetable.html": "/prayer-times", "/admin.html": "/admin"
+};
+Object.entries(legacyRoutes).forEach(([legacy, clean]) => app.get(legacy, (req, res) => res.redirect(301, clean)));
 app.use(express.static(__dirname, { maxAge: "5m", setHeaders(res, filePath) { if (path.extname(filePath) === ".html") res.setHeader("Cache-Control", "public, max-age=0"); } }));
 
 function readContent() { return JSON.parse(fs.readFileSync(contentPath, "utf8")); }
@@ -43,4 +48,14 @@ app.put("/api/content", requireAdmin, (req, res) => {
   writeContent(content);
   res.json(content);
 });
+const pageRoutes = {
+  "/education": "Education.html",
+  "/programs": "Events.html",
+  "/donate": "Donation.html",
+  "/contact": "Contactus.html",
+  "/about": "AboutUs.html",
+  "/prayer-times": "timetable.html",
+  "/admin": "admin.html"
+};
+Object.entries(pageRoutes).forEach(([clean, file]) => app.get(clean, (req, res) => res.sendFile(path.join(__dirname, file))));
 app.listen(port, () => console.log(`Masjid Arkan running on port ${port}`));
