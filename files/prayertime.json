@@ -7,6 +7,14 @@
 
         "magrib" : "5:30 PM",
 
-        "isha" : "7:45 PM"
+        "isha" : "7:45 PM",
+
+        "jumuah" : "",
+
+        "adhanFajr" : "",
+        "adhanDhuhr" : "",
+        "adhanAsr" : "",
+        "adhanMaghrib" : "",
+        "adhanIsha" : ""
 
 }
