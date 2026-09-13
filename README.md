@@ -19,16 +19,18 @@ SESSION_SECRET=<a long random value>
 NODE_ENV=production
 ```
 
-For persistent admin edits, create a Railway volume mounted at `/data`, then
-add this variable:
+For persistent admin edits, create a Railway volume mounted at `/data`. The
+server automatically uses `/data/site-content.json` and seeds it once from the
+repository. Do not delete that volume during redeployments.
+
+If your volume uses a different mount location, add this variable:
 
 ```text
 ARKAN_CONTENT_FILE=/data/site-content.json
 ```
 
-Copy `files/site-content.json` to the mounted volume once during setup. Without
-a persistent volume, Railway can lose schedule and announcement updates when it
-restarts or redeploys the service.
+Without a persistent volume, Railway can lose schedule and announcement updates
+when it restarts or redeploys the service.
 
 ## Local development
 

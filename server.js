@@ -5,7 +5,9 @@ const path = require("path");
 
 const app = express();
 const port = process.env.PORT || 3000;
-const contentPath = process.env.ARKAN_CONTENT_FILE || path.join(__dirname, "files", "site-content.json");
+const seedContentPath = path.join(__dirname, "files", "site-content.json");
+const railwayVolumePath = "/data/site-content.json";
+const contentPath = process.env.ARKAN_CONTENT_FILE || (fs.existsSync("/data") ? railwayVolumePath : seedContentPath);
 const adminPassword = process.env.ADMIN_PASSWORD;
 const sessionSecret = process.env.SESSION_SECRET;
 
@@ -19,6 +21,12 @@ const legacyRoutes = {
 Object.entries(legacyRoutes).forEach(([legacy, clean]) => app.get(legacy, (req, res) => res.redirect(301, clean)));
 app.use(express.static(__dirname, { setHeaders(res) { res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0"); res.setHeader("Pragma", "no-cache"); res.setHeader("Expires", "0"); } }));
 
+function ensureContentFile() {
+  if (fs.existsSync(contentPath)) return;
+  fs.mkdirSync(path.dirname(contentPath), { recursive: true });
+  fs.copyFileSync(seedContentPath, contentPath);
+}
+ensureContentFile();
 function readContent() { return JSON.parse(fs.readFileSync(contentPath, "utf8")); }
 function writeContent(content) { fs.writeFileSync(contentPath, JSON.stringify(content, null, 2)); }
 function safeEqual(left, right) { const a = Buffer.from(String(left)); const b = Buffer.from(String(right)); return a.length === b.length && crypto.timingSafeEqual(a, b); }
