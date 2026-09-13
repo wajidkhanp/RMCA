@@ -17,7 +17,7 @@ const legacyRoutes = {
   "/Contactus.html": "/contact", "/AboutUs.html": "/about", "/timetable.html": "/prayer-times", "/admin.html": "/admin"
 };
 Object.entries(legacyRoutes).forEach(([legacy, clean]) => app.get(legacy, (req, res) => res.redirect(301, clean)));
-app.use(express.static(__dirname, { maxAge: "5m", setHeaders(res, filePath) { if (path.extname(filePath) === ".html") res.setHeader("Cache-Control", "public, max-age=0"); } }));
+app.use(express.static(__dirname, { setHeaders(res) { res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0"); res.setHeader("Pragma", "no-cache"); res.setHeader("Expires", "0"); } }));
 
 function readContent() { return JSON.parse(fs.readFileSync(contentPath, "utf8")); }
 function writeContent(content) { fs.writeFileSync(contentPath, JSON.stringify(content, null, 2)); }
